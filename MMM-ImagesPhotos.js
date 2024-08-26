@@ -226,6 +226,8 @@ Module.register(ourModuleName, {
     const photoImage = this.randomPhoto();
 
     if (photoImage) {
+      const wrap = document.createElement("div");
+      wrap.className = "wrap";
       const img = document.createElement("img");
       img.src = photoImage.url;
       img.id = "mmm-images-photos";
@@ -233,7 +235,8 @@ Module.register(ourModuleName, {
       img.style.maxHeight = this.config.maxHeight;
       img.style.opacity = self.config.opacity;
       img.className = "bgimage";
-      wrapper.appendChild(img);
+      wrap.appendChild(img);
+      wrapper.appendChild(wrap);
       self.startTimer();
     }
     return wrapper;
