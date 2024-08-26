@@ -6,7 +6,6 @@
 /* when full screen */
 .bgimagefs {
   /* Center and scale the image nicely */
-
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,4 +16,22 @@
 
 /* not fullscreen */
 .bgimage {
+
+}
+
+.wrap{
+	overflow:hidden;
+	display:inline-block;
+	position:relative;
+	border-radius:5px;
+}
+.wrap img {
+	vertical-align:middle;
+}
+.wrap:after{
+  content: "";
+  position: absolute;
+  width: 100%; height: 100%;
+  left: 0; top: 0;
+  box-shadow: inset 0px 0px 10px 12px #000000;
 }
